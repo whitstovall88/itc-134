@@ -1,0 +1,24 @@
+hello world!
+1/5 Operating Systems
+File system (hw) HD, CDrom, USB, network, Google Drive/Dropbox/One Drive, encrypted file drives (Tresser, Spiderrock)
+Processes: process interfaces with CPU and kernel. Utilizes permissions; it's what ties everything together (even your login/username is a process)
+Permissions: where you/other users/other systems can or cannot read/write files
+Network (hw) Network Interface Card, wireless bluetooth (but the wireless part is still an NIC). Enables you to use the internet, talk to your printer, etc.
+Resources (hw) CPU, Memory, Disk. File system maps to Disk (which could be network, external HD, etc.) CPU is the processer of the operating system. Memory and RAM map to each other.
+Abstractions: Containers, zones, virtual machines- this is a way of running other OS's within your own operating system (sort of like we do with VMs).
+
+A big difference between Windows and Linux is the way they lay out/map out their file system. (below is the IDEAL file structure)
+Windows: where does it start?                       Linux: starts from the root
+C:\users\me                                         /home/me  (this is for OSx, iOS, Android, Linux)
+
+CMD prompt
+C:\Users\Conference4> -- this is where you are
+dir -- shows all files and folders
+cd -- current directory
+cd .. --moves you up one directory (then hit dir again to check)
+user directory C:\Users is where all your files are stored
+cd .. --now you're in C:\> -- you see percormance logs, program files... (once you hit dir again, of course)
+Keeping everything separated in a system like this makes it easier to store, find, and retrieve files.
+
+misc. notes
+Linux command line tools in Windows 10 (you'll get bash and all the utilities): Microsoft partnered with Ubuntu
