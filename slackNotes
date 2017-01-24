@@ -1,0 +1,135 @@
+1/24 (before class)
+here's the shell script you would run (from Linux) to add someone as a collaborator to a project
+
+[1:25]  
+curl -i -u "my_user_name:my_password" -X PUT -d ''
+*
+
+C:\Users\nbade>git config --global user.name "itc134demo"
+
+C:\Users\nbade>git config --global user.email nicolebadeofficehours@gmail.com
+
+[2:08]  
+git clone <your repository.git>
+*
+C:\Users\nbade>git clone "https://github.com/itc134demo/hello-world.git"
+Cloning into 'hello-world'...
+remote: Counting objects: 7, done.
+remote: Total 7 (delta 0), reused 0 (delta 0), pack-reused 7
+Unpacking objects: 100% (7/7), done.
+GitHub
+itc134demo/hello-world
+hello-world - This is my first hello world reposatory!!!!! This is very exciting
+ 
+
+[2:16]  
+git config --system http.sslverify false
+dir
+
+[2:18]  
+cd hello-world
+
+[2:18]  
+dir
+
+[2:19]  
+echo "these are words for a file.  Yay yay yay." >> newfile.txt
+
+[2:20]  
+dir
+
+[2:21]  
+git add newfile.txt
+
+[2:22]  
+C:\Users\nbade\hello-world>git commit -m "created a new file for text"
+[master 59265ec] created a new file for text
+ 1 file changed, 1 insertion(+)
+ create mode 100644 newfile.txt
+ *
+ 
+ :\Users\ggreer\Documents\GitHub\hello-world>git push
+Logon failed, use ctrl+c to cancel basic credential prompt.
+Username for 'https://github.com/': \geogreer4@gmail.com
+Password for 'https://\geogreer4@gm@github.com/':
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/geogreer4/hello-world.git/'
+*
+
+Username for 'https://github.com': itc134demo
+*
+
+C:\Users\nbade\hello-world>git push
+Username for 'https://github.com': itc134demo
+Password for 'https://itc134demo@github.com':
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 337 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/itc134demo/hello-world.git
+   0be2ef1..59265ec  master -> master
+   *
+   
+  gloriaxinhui [2:34 PM] 
+C:\Users\gzhang\hello-world>username for "http://github.com":gloriaxinhui
+'username' is not recognized as an internal or external command,
+operable program or batch file.
+*
+
+Git Status Summary Information
+
+The Git status summary information provides a wealth of "Git status" information at a glance, all the time in your prompt.
+
+By default, the status summary has the following format:
+
+[{HEAD-name} S +A ~B -C !D | +E ~F -G !H W]
+
+   [ (BeforeText)
+    {HEAD-name} is the current branch, or the SHA of a detached HEAD
+        Cyan means the branch matches its remote
+        Green means the branch is ahead of its remote (green light to push)
+        Red means the branch is behind its remote
+        Yellow means the branch is both ahead of and behind its remote
+    S represents the branch status in relation to remote (tracked origin) branch. Note: This information reflects the state of the remote tracked branch after the last git fetch/pull of the remote.
+        ≡ = The local branch in at the same commit level as the remote branch (BranchIdenticalStatus)
+        ↑ = The local branch is ahead of the remote branch; a 'git push' is required to update the remote branch (BranchAheadStatus)
+        ↓ = The local branch is behind the remote branch; a 'git pull' is required to update the local branch (BranchBehindStatus)
+        :arrow_up_down:  = The local branch is both ahead and behind the remote branch; a rebase of the local branch is required before pushing local changes to the remote branch (BranchBehindAndAheadStatus)
+        × = The local branch is tracking a branch that is gone from the remote (`BranchGoneStatus')
+    ABCD represent the index; | (DelimText); EFGH represent the working directory
+        + = Added files
+        ~ = Modified files
+        - = Removed files
+        ! = Conflicted files
+        As in git status, index status is dark green and working directory status is dark red *
+    W represents the status of the working folder
+        ! = There are untracked changes in the working tree (LocalStagedStatus)
+        ~ = There are staged changes in the working tree waiting to be committed (LocalWorkingStatus)
+        None = There are no uncommitted or unstaged changes to the working tree (LocalDefault)
+    ] (AfterText)
+
+The symbols and surrounding text can be customized by the corresponding properties on $GitPromptSettings.
+
+For example, a status of [master ≡ +0 ~2 -1 | +1 ~1 -0] corresponds to the following git status:
+
+# On branch master
+#
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#        modified:   this-changed.txt
+#        modified:   this-too.txt
+#        deleted:    gone.ps1
+#
+# Changed but not updated:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#        modified:   not-staged.ps1
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#        new.file
+*
